@@ -14,6 +14,7 @@ class WeatherApiService {
 
     if (response.statusCode == 200) {
       final Map<String, dynamic> json = jsonDecode(response.body);
+
       return Weather.fromJson(json);
     } else {
       throw Exception('Failed to fetch weather (${response.statusCode})');

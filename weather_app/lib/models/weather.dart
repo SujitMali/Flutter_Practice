@@ -64,7 +64,7 @@ class Weather {
     required this.sunset,
   });
 
-  /// API JSON → App Data
+  ///! API JSON → App Data
   factory Weather.fromJson(Map<String, dynamic> json) {
     return Weather(
       cityId: json['id'],

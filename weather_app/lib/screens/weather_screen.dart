@@ -23,7 +23,6 @@ class _WeatherScreenState extends State<WeatherScreen> {
   }
 
   Future<void> _loadWeather() async {
-    // 1️⃣ Load cached data first
     final cached = await _repository.getCachedWeather(puneCityId);
 
     if (cached != null) {
@@ -32,7 +31,6 @@ class _WeatherScreenState extends State<WeatherScreen> {
       });
     }
 
-    // 2️⃣ Fetch fresh data
     setState(() {
       _loading = true;
     });
